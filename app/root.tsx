@@ -1,13 +1,18 @@
-import { Outlet } from "@remix-run/react";
+import { Link, Links, Meta, Outlet, Scripts } from "@remix-run/react";
 
 const Root = () => {
   return (
     <html lang="kr">
       <head>
-        <meta charSet="UTF-8" />
+        <Meta />
+        <Links />
       </head>
       <body>
+        <nav>
+          <Link to="/step/1">step1</Link>
+        </nav>
         <Outlet />
+        <Scripts />
       </body>
     </html>
   );

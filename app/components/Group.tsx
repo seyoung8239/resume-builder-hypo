@@ -1,3 +1,4 @@
+import { UseFormRegister, FieldValues } from "react-hook-form";
 import { Item } from "../types/item.type";
 import Field from "./Field";
 
@@ -10,7 +11,7 @@ const Group = ({ item }: Props) => {
       <h3>{item.title}</h3>
       <div>
         {item.childrenItemList?.map((fieldItem) => (
-          <Field item={fieldItem} />
+          <Field key={fieldItem.title} item={fieldItem} />
         ))}
       </div>
     </div>
