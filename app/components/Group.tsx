@@ -1,0 +1,20 @@
+import { Item } from "../types/item.type";
+import Field from "./Field";
+
+interface Props {
+  item: Item;
+}
+const Group = ({ item }: Props) => {
+  return (
+    <div>
+      <h3>{item.title}</h3>
+      <div>
+        {item.childrenItemList?.map((fieldItem) => (
+          <Field item={fieldItem} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Group;
