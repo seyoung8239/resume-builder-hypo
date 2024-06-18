@@ -1,14 +1,12 @@
-import { useContext } from "react";
 import { Item } from "../types/item.type";
-import Group from "./Group";
-import { RegisterContext } from "./Step";
+import {useFormContext} from "react-hook-form";
 
 interface Props {
   item: Item;
 }
 const Field = ({ item }: Props) => {
   const { title, value, placeholder } = item;
-  const register = useContext(RegisterContext)!;
+  const { register } = useFormContext();
 
   return (
     <div>
