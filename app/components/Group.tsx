@@ -1,4 +1,3 @@
-import { UseFormRegister, FieldValues } from "react-hook-form";
 import { Item } from "../types/item.type";
 import Field from "./Field";
 
